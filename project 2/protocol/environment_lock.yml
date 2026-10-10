@@ -1,0 +1,10 @@
+# Auto-generated environment lock (YAML-compatible)
+python: "3.11.13"
+pip_packages: {"numpy": "2.4.6", "scipy": "1.16.3", "pandas": "2.3.1", "scikit-learn": "1.7.1", "lightgbm": "4.7.0", "pygam": "0.12.0", "gemmi": "0.7.5", "biopython": "1.88", "freesasa": "2.2.1"}
+mkdssp: "mkdssp version 4.2.2"
+mmseqs2: "8cc5ce367b5638c4306c2d7cfc652dd099a4643f"
+os: "Linux-4.19.0-gvisor-x86_64-with-glibc2.39"
+note: "mkdssp installed via apt (session-level); rebuild with: apt-get install -y dssp. MMseqs2 static binary at /workspace/mmseqs/bin/mmseqs."
+frozen_seeds: {"master": 42, "cv_split": 42, "bootstrap": "1000-1999", "profile_swap": "0-99", "lightgbm": 42}
+anm: {"cutoff_A": 10, "coarse_grain": "CA", "spring_constant": 1, "rigid_modes_removed": 6, "pseudoinverse": "dense"}
+data_versions: {"ahojdb_subset1": "v1 archive listing, downloaded 2026-10-03", "cryptobench": "OSF pz4a9 dataset.json+folds.json, downloaded 2026-10-03"}

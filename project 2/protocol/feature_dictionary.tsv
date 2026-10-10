@@ -1,0 +1,24 @@
+feature_name	type	definition	protocol_section
+aa_identity	categorical(20)	Amino acid identity of the residue (20 standard classes)	8.1
+rsa	float	Relative solvent accessibility, Shrake-Rupley, normalized by theoretical max accessibility of the residue type	8.1
+depth	float	Residue depth: mean over residue heavy atoms of distance to nearest molecular SASA surface point	8.1
+wcn	float	Weighted contact number: sum of 1/d^2 over C-alpha atoms within 10 A, excluding self	8.1
+ss	categorical(3)	DSSP secondary structure, 3-state H/E/C	8.1
+radial_position	float	Distance of C-alpha to structure centroid divided by max residue-centroid distance	8.1
+terminal_distance	float	min(i-1, L-i)/L over observed residues (normalized distance to nearest sequence terminus)	8.1
+nb_mean_rsa	float	Mean RSA of residues with C-alpha within 10 A, excluding self	8.2
+nb_mean_depth	float	Mean Depth of residues with C-alpha within 10 A, excluding self	8.2
+nb_mean_wcn	float	Mean WCN of residues with C-alpha within 10 A, excluding self	8.2
+pct_dfi	float	Percentile rank (within core residues) of DFI = sum_j R_ij, R_ij = Frobenius norm of 3x3 block (i,j) of ANM H+ (cutoff 10 A, rigid modes removed)	11
+response_dispersion	float	Percentile rank (within core residues) of normalized response entropy D_i = -sum p_ij log p_ij / log(N-1), self excluded	12
+b_factor_percentile	float	Protein-internal percentile of mean residue B-factor (X-ray only, comparator analysis)	9
+shell_mechanics_0_10	float	Sum of R_ij over source residues j with 0 < d_ij <= 10 A (source-distance analysis)	27
+shell_mechanics_10_20	float	Sum of R_ij over source residues j with 10 < d_ij <= 20 A	27
+shell_mechanics_20_30	float	Sum of R_ij over source residues j with 20 < d_ij <= 30 A	27
+shell_mechanics_30_40	float	Sum of R_ij over source residues j with 30 < d_ij <= 40 A	27
+shell_mechanics_40_inf	float	Sum of R_ij over source residues j with d_ij > 40 A	27
+shell_wcn_0_10	float	Sum of 1/d_ij^2 over source residues with 0 < d_ij <= 10 A (same-shell packing control)	27.3
+shell_wcn_10_20	float	Sum of 1/d_ij^2 over source residues with 10 < d_ij <= 20 A	27.3
+shell_wcn_20_30	float	Sum of 1/d_ij^2 over source residues with 20 < d_ij <= 30 A	27.3
+shell_wcn_30_40	float	Sum of 1/d_ij^2 over source residues with 30 < d_ij <= 40 A	27.3
+shell_wcn_40_inf	float	Sum of 1/d_ij^2 over source residues with d_ij > 40 A	27.3
